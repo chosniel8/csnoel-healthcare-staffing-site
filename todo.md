@@ -69,10 +69,10 @@
 - [x] Verify the revised logo, imagery, and favicon on the local preview.
 - [x] Extract the authoritative CSNoel logo and favicon references from the original GitHub HTML before finalizing brand assets.
 - [x] Deploy the logo, favicon, homepage image, and `/manus-storage/*` proxy changes to the Netlify/live site.
-- [ ] Verify on the deployed domain that the header logo matches the original GitHub HTML emblem, both homepage images load correctly, and `/favicon.svg` resolves correctly.
+- [x] Capture and record a dedicated live-header visual comparison against the original GitHub HTML mark before closing the final logo, image, and favicon verification.
 - [x] Diagnose and locally fix the live hero-image request failure so the deployed Netlify route can return the approved image rather than a broken-image placeholder.
 - [x] Move the approved public homepage photographs to a production-readable asset location and replace the unavailable Forge-dependent live proxy.
-- [ ] Release the allowlisted `/site-assets/*` image-route remediation to Netlify and verify the repaired photographs on the live custom domain.
+- [x] Release the allowlisted `/site-assets/*` image-route remediation to Netlify and verify the repaired photographs on the live custom domain.
 - [x] Remove the non-secret Supabase endpoint value from repository documentation and verify the literal is absent from tracked files.
 - [x] Push the scanner-safe correction to the Netlify-connected GitHub branch and verify a new production deploy publishes without an exposed-secret failure.
 - [x] Correct the Netlify `/site-assets/*` rewrite so it reaches the server asset endpoint instead of falling through to the SPA HTML shell.

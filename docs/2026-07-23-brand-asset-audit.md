@@ -53,3 +53,15 @@ The released homepage now renders the exact blue-and-green GitHub emblem in the 
 The direct live check established that both `/site-assets/*` requests returned the 1,002-byte SPA HTML shell (`200 text/html`) rather than JPEG content. The allowlisted Express handler itself was correct, but Netlify had no matching function rewrite before its `/* -> /index.html` fallback. A dedicated `/site-assets/:key -> /.netlify/functions/api/site-assets/:key` rule has now been inserted before that fallback; the next release will test this exact production path.
 
 The routing correction passes the automated suite and local Netlify build. It preserves the narrow allowlist in the server handler, does not change private-storage behavior, and routes only the two approved public image keys through the existing serverless function.
+
+Netlify published the rewrite checkpoint at `0a243c2`. Direct production checks now show that each approved `/site-assets/*` route returns a `302` to the public Supabase object followed by `200 image/jpeg`: the corridor image is a 5,222 × 3,481 JPEG, and the clinician-stethoscope image is a 4,000 × 6,000 JPEG. The former 1,002-byte SPA HTML responses are no longer returned for either asset path.
+
+## Final production verification
+
+The live CSNoel homepage now displays the exact blue-and-green emblem from the original GitHub HTML in the header, and the corridor photograph renders within the intended framed hero composition with its information cards intact. The published image route has been verified at the network layer for both homepage photographs. The live `/favicon.svg` endpoint returns `200 image/svg+xml` and contains the same cross, green circle, and green curved-path geometry used by the public emblem; it intentionally contains no wordmark text because the browser icon is the mark-only derivative.
+
+Direct source comparison confirms that the deployed reusable emblem uses the original GitHub `viewBox`, four rectangles, green circle, and curved green path with identical coordinates, radii, colors, opacities, and stroke settings. The deployed wordmark also preserves the original `CS` navy / `Noel` green treatment. This provides both visual and source-level confirmation that the live header mark is the authoritative logo rather than a substitute.
+
+Dedicated live-header observation at `https://csnoelhealthcarestaffing.com/?header-emblem-verification=1` confirms that the visible top-left header mark is the blue layered cross with a green circle and green curved accent, followed by the navy `CS` / green `Noel` wordmark. Its rendered proportions, colors, and placement match the original GitHub HTML header reference, while the corridor photograph is visibly loaded in the adjacent hero frame.
+
+Direct screenshot evidence was captured from the live custom domain at 1,440 × 900 pixels (`/home/ubuntu/csnoel-live-header-verification.png`). The top-left header visibly shows the authoritative layered blue cross, green circular accent, green curved underline, and two-tone `CSNoel` wordmark. This completes the dedicated visual comparison independently of the source-level SVG match.
