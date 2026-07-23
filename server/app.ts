@@ -2,6 +2,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import express from "express";
 import { createContext } from "./_core/context";
 import { publicSiteAssetProxy } from "./publicAssetProxy";
+import { publicSiteAssetRedirect } from "./publicSiteAssets";
 import { appRouter } from "./routers";
 
 /**
@@ -14,6 +15,7 @@ export function createApp() {
 
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
+  app.get("/site-assets/:key", publicSiteAssetRedirect);
   app.get("/manus-storage/:key", (req, res) => {
     void publicSiteAssetProxy(req, res).catch(() => {
       if (!res.headersSent) res.status(502).json({ error: "The requested asset is temporarily unavailable." });

@@ -15,8 +15,8 @@ import {
 import { useMemo } from "react";
 import { Link } from "wouter";
 
-const HERO_IMAGE = "/manus-storage/csnoel-clinicians-corridor_31a9a5ed.jpg";
-const PORTRAIT_IMAGE = "/manus-storage/csnoel-clinician-stethoscope_10219176.jpg";
+const HERO_IMAGE = "/site-assets/csnoel-clinicians-corridor.jpg";
+const PORTRAIT_IMAGE = "/site-assets/csnoel-clinician-stethoscope.jpg";
 
 const STATS = [
   { value: "4", label: "ways to work", detail: "Travel, LTC, Rapid Response, Per Diem" },
