@@ -63,3 +63,10 @@
 - [x] Verify the live custom domain’s HTTPS, public jobs route, one-time administrator session flow, protected API gate, and ownership of the Netlify deployment after DNS propagation.
 - [x] Remove every clearly labeled preview-only validation row, related owner notification and chat data, and private résumé object after verification.
 - [x] Write a production handoff that documents the secure deployment, administrator access, domain mapping, email-DNS preservation, and validation constraints.
+- [x] Audit all live-site image loading and placement, including the header emblem and hero visual.
+- [x] Verify the header mark against the approved CSNoel emblem and correct it if the implementation uses a substitute asset.
+- [x] Create and apply a favicon/browser icon derived from the approved CSNoel logo.
+- [x] Verify the revised logo, imagery, and favicon on the local preview.
+- [x] Extract the authoritative CSNoel logo and favicon references from the original GitHub HTML before finalizing brand assets.
+- [ ] Deploy the logo, favicon, homepage image, and `/manus-storage/*` proxy changes to the Netlify/live site.
+- [ ] Verify on the deployed domain that the header logo matches the original GitHub HTML emblem, both homepage images load correctly, and `/favicon.svg` resolves correctly.

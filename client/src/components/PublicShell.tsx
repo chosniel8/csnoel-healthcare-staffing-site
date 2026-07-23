@@ -1,5 +1,6 @@
 import { CSNoelChatWidget } from "@/components/CSNoelChatWidget";
 import { Button } from "@/components/ui/button";
+import { CSNoelWordmark } from "@/components/CSNoelBrand";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { type ReactNode, useState } from "react";
@@ -17,17 +18,8 @@ const navigation = [
 
 function Brand() {
   return (
-    <Link href="/" className="group inline-flex items-center gap-2.5" aria-label="CSNoel home">
-      <span className="grid size-10 place-items-center rounded-[1.1rem] bg-[#0b1f3a] shadow-[0_8px_20px_rgba(11,31,58,0.17)] transition-transform duration-200 group-hover:rotate-3">
-        <span className="relative block size-5">
-          <span className="absolute top-0 left-1/2 h-full w-[3px] -translate-x-1/2 rounded-full bg-[#3bd6c6]" />
-          <span className="absolute top-1/2 left-0 h-[3px] w-full -translate-y-1/2 rounded-full bg-[#3bd6c6]" />
-        </span>
-      </span>
-      <span className="leading-none">
-        <span className="block text-[1.15rem] font-extrabold tracking-[-0.05em] text-[#102848]">CSNoel</span>
-        <span className="mt-1 block text-[0.63rem] font-extrabold tracking-[0.18em] text-[#16a6a0] uppercase">Healthcare Staffing</span>
-      </span>
+    <Link href="/" className="group inline-flex rounded-lg py-1 transition-transform duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E8FD8] focus-visible:ring-offset-2" aria-label="CSNoel home">
+      <CSNoelWordmark emblemClassName="size-9" />
     </Link>
   );
 }

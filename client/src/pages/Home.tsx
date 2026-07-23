@@ -15,8 +15,8 @@ import {
 import { useMemo } from "react";
 import { Link } from "wouter";
 
-const HERO_IMAGE = "/manus-storage/csnoel-clinicians-corridor_a135ad2f.jpg";
-const PORTRAIT_IMAGE = "/manus-storage/csnoel-clinician-stethoscope_d2619591.jpg";
+const HERO_IMAGE = "/manus-storage/csnoel-clinicians-corridor_31a9a5ed.jpg";
+const PORTRAIT_IMAGE = "/manus-storage/csnoel-clinician-stethoscope_10219176.jpg";
 
 const STATS = [
   { value: "4", label: "ways to work", detail: "Travel, LTC, Rapid Response, Per Diem" },
@@ -92,7 +92,7 @@ export default function Home() {
           >
             <div className="overflow-hidden rounded-[2rem] bg-[#0b1f3a] p-3 shadow-[0_35px_80px_rgba(15,46,86,0.24)] sm:p-4">
               <div className="relative aspect-[1.12/1] overflow-hidden rounded-[1.35rem]">
-                <img src={HERO_IMAGE} alt="Healthcare clinicians walking together through a hospital corridor" className="size-full object-cover object-center" />
+                <img src={HERO_IMAGE} alt="Healthcare clinicians walking together through a hospital corridor" className="size-full object-cover object-[50%_44%]" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#0b1f3a]/72 via-transparent to-white/20" />
                 <div className="absolute right-4 bottom-4 left-4 rounded-2xl border border-white/25 bg-[#0b1f3a]/84 p-4 text-white backdrop-blur-sm sm:right-6 sm:bottom-6 sm:left-auto sm:w-64">
                   <p className="text-xs font-bold tracking-[0.14em] text-[#3bd6c6] uppercase">The CSNoel difference</p>
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="container grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="relative mx-auto w-full max-w-sm lg:mx-0">
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3">
-              <img src={PORTRAIT_IMAGE} alt="Clinician holding a stethoscope" className="aspect-[0.78] w-full rounded-[1.45rem] object-cover object-[58%_center]" />
+              <img src={PORTRAIT_IMAGE} alt="Clinician holding a stethoscope" className="aspect-[0.78] w-full rounded-[1.45rem] object-cover object-[50%_42%]" />
               <div className="absolute right-0 bottom-8 rounded-l-2xl bg-[#3bd6c6] px-5 py-4 text-[#0b1f3a] shadow-xl">
                 <p className="text-xl font-extrabold">Your goals.</p>
                 <p className="text-sm font-bold">Your next chapter.</p>

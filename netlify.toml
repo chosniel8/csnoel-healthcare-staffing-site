@@ -8,10 +8,16 @@
   external_node_modules = ["express", "serverless-http"]
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
-  force = true
+from = "/api/*"
+to = "/.netlify/functions/api/:splat"
+status = 200
+force = true
+
+[[redirects]]
+from = "/manus-storage/:key"
+to = "/.netlify/functions/api/manus-storage/:key"
+status = 200
+force = true
 
 [[redirects]]
   from = "/*"
