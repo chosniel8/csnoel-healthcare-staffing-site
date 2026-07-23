@@ -75,3 +75,4 @@
 - [ ] Release the allowlisted `/site-assets/*` image-route remediation to Netlify and verify the repaired photographs on the live custom domain.
 - [x] Remove the non-secret Supabase endpoint value from repository documentation and verify the literal is absent from tracked files.
 - [x] Push the scanner-safe correction to the Netlify-connected GitHub branch and verify a new production deploy publishes without an exposed-secret failure.
+- [x] Correct the Netlify `/site-assets/*` rewrite so it reaches the server asset endpoint instead of falling through to the SPA HTML shell.

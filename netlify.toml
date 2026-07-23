@@ -20,6 +20,12 @@ status = 200
 force = true
 
 [[redirects]]
+from = "/site-assets/:key"
+to = "/.netlify/functions/api/site-assets/:key"
+status = 200
+force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
