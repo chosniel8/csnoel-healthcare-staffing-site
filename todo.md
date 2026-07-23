@@ -25,4 +25,4 @@
 - [x] Verify the job-detail content contract and secure resume-application handoff from the Apply Now control.
 - [x] Verify facilities inquiry success and error states, About page mission content, and chatbot open/loading/error behavior.
 - [x] Verify role-gated job create/edit/deactivate controls and protected applications, leads, chat, and alert review views.
-- [ ] Create a final deployment-ready checkpoint after all completed work is marked accurately.
+- [x] Create a final deployment-ready checkpoint after all completed work is marked accurately.
