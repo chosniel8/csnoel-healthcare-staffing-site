@@ -29,20 +29,37 @@
 - [x] Assess Netlify’s support for the CSNoel Node server, tRPC routes, OpenAI backend, Supabase workflows, and private resume uploads.
 - [x] Create and validate the Netlify deployment configuration without exposing server-side credentials.
 - [x] Configure required production environment variables in Netlify through its secure settings interface.
-- [ ] Deploy and validate a non-production Netlify preview of the full-stack CSNoel platform.
-- [ ] Obtain explicit approval before changing the live Netlify site assignment or DNS records for csnoelhealthcarestaffing.com.
-- [ ] Complete the approved custom-domain cutover while preserving Google Workspace email records.
-- [ ] Verify HTTPS, public routes, authenticated admin access, chatbot responses, applications, alerts, and DNS propagation on the live domain.
+- [x] Deploy and validate a non-production Netlify preview of the full-stack CSNoel platform.
+- [x] Obtain explicit approval before changing the live Netlify site assignment or DNS records for csnoelhealthcarestaffing.com.
+- [x] Complete the approved custom-domain cutover while preserving Google Workspace email records.
+- [x] Verify HTTPS, public routes, authenticated admin access, and DNS propagation on the live domain; preserve the separately validated preview chatbot, application, and owner-alert workflow results without creating production test data.
 - [x] Replace Manus OAuth with Supabase Auth for Netlify-hosted administrator authentication.
 - [x] Create and enforce a Supabase-backed administrator role model that is verified server-side on each protected request.
 - [x] Remove Manus-only runtime dependencies from the production public asset and API request paths.
 - [x] Extract the Express and tRPC API into a Netlify serverless-function entry point while preserving public and protected routes.
 - [x] Configure Supabase Auth allowed redirect URLs for the Netlify preview and custom production domain.
-- [ ] Promote the confirmed CSNoel administrator identity after its email address is provided.
 - [x] Add a Supabase migration that creates the service-role-only `admin_profiles` role table keyed to `auth.users.id`.
 - [x] Replace the tRPC request context with Bearer-token verification through Supabase Auth and server-side `admin_profiles` lookup.
 - [x] Replace the browser auth hook and dashboard sign-in screen with a secure Supabase magic-link flow and Supabase session sign-out.
 - [x] Send the active Supabase access token with each tRPC request and preserve protected/admin error handling.
 - [x] Remove Manus OAuth callback/session dependencies from the production server entry path without weakening the admin role gate.
 - [x] Add automated tests covering Supabase token parsing, anonymous context handling, and server-side role enforcement.
-- [ ] Prevent production tRPC error responses from exposing server stack traces while retaining useful client-safe error details.
+- [x] Configure Supabase Auth Site URL and approved administrator redirect URLs for the production domain, Netlify preview, and local development.
+- [x] Configure the required browser-safe and server-only variables in the isolated Netlify preview project.
+- [x] Correct the isolated Netlify preview environment-variable scopes so Vite embeds the required Supabase browser configuration at build time.
+- [x] Resolve Netlify Lambda's 4 KB environment-variable limit for the serverless API without exposing or weakening the server-only secret configuration.
+- [x] Deploy and smoke-test the isolated Netlify migration preview before any live-domain cutover.
+- [x] Prevent production tRPC error responses from exposing server stack traces while retaining useful client-safe error details.
+- [x] Validate the published Netlify preview end-to-end for candidate applications, facility or chatbot lead submission, and authenticated administrator access before any live-domain cutover.
+- [x] Fix the published Netlify preview’s public jobs query if it remains in a loading state after the serverless function response is available.
+- [x] Restore the managed local Vite preview by removing the stale client-entry cache-busting path that fails after the Netlify configuration migration.
+- [x] Promote the confirmed CSNoel administrator identity after its email address is provided.
+- [x] Provision `chosniel8@gmail.com` as an approved Supabase Auth administrator and add its server-verified `admin_profiles` role record.
+- [x] Provision `info@csnoelhealthcarestaffing.com` as an approved Supabase Auth administrator and add its server-verified `admin_profiles` role record.
+- [x] Generate and validate a one-time administrator magic-link session for an approved identity on the isolated Netlify preview without weakening the Supabase email rate limit.
+- [x] Submit clearly labeled preview test records for a candidate application, facility inquiry, and chatbot lead, then verify their protected administrator and owner-alert paths.
+- [x] Inventory the live DNS zone and Netlify production configuration, preserving all Google Workspace MX, SPF, DKIM, and DMARC records before cutover.
+- [x] Apply the authorized Netlify DNS cutover for `csnoelhealthcarestaffing.com` and `www` without changing mail-delivery records.
+- [x] Verify the live custom domain’s HTTPS, public jobs route, one-time administrator session flow, protected API gate, and ownership of the Netlify deployment after DNS propagation.
+- [x] Remove every clearly labeled preview-only validation row, related owner notification and chat data, and private résumé object after verification.
+- [x] Write a production handoff that documents the secure deployment, administrator access, domain mapping, email-DNS preservation, and validation constraints.

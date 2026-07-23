@@ -6,11 +6,11 @@ On 2026-07-23, the Supabase Auth **Site URL** was saved as `https://csnoelhealth
 
 ## Verified domains
 
-The connected Netlify project uses `csnoelhealthcarestaffing.com` as its primary production domain, with `www.csnoelhealthcarestaffing.com` redirecting to that primary domain and `admirable-haupia-a7193b.netlify.app` available as the Netlify project subdomain. The Supabase Auth Site URL field was prepared with `https://csnoelhealthcarestaffing.com`.
+The connected live Netlify project uses `csnoelhealthcarestaffing.com` as its primary production domain, with `www.csnoelhealthcarestaffing.com` redirecting to that primary domain and `admirable-haupia-a7193b.netlify.app` available as the legacy Netlify project subdomain. The Supabase Auth Site URL is set to `https://csnoelhealthcarestaffing.com`. A separate preview is published at `https://csnoel-healthcare-migration-preview.netlify.app` and does not change the live custom-domain assignment.
 
 ## Supabase Auth redirects
 
-The Supabase URL Configuration page initially contained no redirect URLs. The magic-link client sends users to `/admin`, so the required allow-list entries are `https://csnoelhealthcarestaffing.com/admin`, `https://www.csnoelhealthcarestaffing.com/admin`, `https://admirable-haupia-a7193b.netlify.app/admin`, and the local-development value `http://localhost:3000/admin`.
+The magic-link client sends users to `/admin`. The approved entries are `https://csnoelhealthcarestaffing.com/admin`, `https://www.csnoelhealthcarestaffing.com/admin`, `https://admirable-haupia-a7193b.netlify.app/admin`, and the local-development value `http://localhost:3000/admin`. Add `https://csnoel-healthcare-migration-preview.netlify.app/admin` before validating magic-link sign-in on the isolated preview.
 
 ## Netlify routing model
 

@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { defineConfig } from "vite";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
@@ -40,4 +40,4 @@ export default defineConfig(({ command }) => ({
       deny: ["**/.*"],
     },
   },
-}));
+});
