@@ -103,6 +103,17 @@ export type CSNoelDatabase = {
         Update: Partial<CSNoelDatabase["public"]["Tables"]["owner_notifications"]["Row"]>;
         Relationships: [];
       };
+      admin_profiles: {
+        Row: {
+          user_id: string;
+          role: "admin" | "user";
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: Partial<CSNoelDatabase["public"]["Tables"]["admin_profiles"]["Row"]> & Pick<CSNoelDatabase["public"]["Tables"]["admin_profiles"]["Row"], "user_id">;
+        Update: Partial<CSNoelDatabase["public"]["Tables"]["admin_profiles"]["Row"]>;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;
