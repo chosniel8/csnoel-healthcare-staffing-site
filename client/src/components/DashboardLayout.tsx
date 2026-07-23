@@ -19,13 +19,15 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { startLogin } from "@/const";
+import { sendMagicLink } from "@/const";
+import { Input } from "@/components/ui/input";
 import { useIsMobile } from "@/hooks/useMobile";
-import { House, LayoutDashboard, LogOut, PanelLeft } from "lucide-react";
-import { CSSProperties, useEffect, useRef, useState } from "react";
+import { House, LayoutDashboard, Loader2, LogOut, PanelLeft } from "lucide-react";
+import { CSSProperties, type FormEvent, useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "CSNoel admin", path: "/admin" },
@@ -47,6 +49,21 @@ export default function DashboardLayout({
     return saved ? parseInt(saved, 10) : DEFAULT_WIDTH;
   });
   const { loading, user } = useAuth();
+  const [email, setEmail] = useState("");
+  const [sendingMagicLink, setSendingMagicLink] = useState(false);
+
+  const handleMagicLink = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSendingMagicLink(true);
+    try {
+      await sendMagicLink(email.trim());
+      toast.success("Check your email for a secure sign-in link.");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "The sign-in link could not be sent.");
+    } finally {
+      setSendingMagicLink(false);
+    }
+  };
 
   useEffect(() => {
     localStorage.setItem(SIDEBAR_WIDTH_KEY, sidebarWidth.toString());
@@ -65,16 +82,27 @@ export default function DashboardLayout({
               Sign in to continue
             </h1>
             <p className="text-sm text-muted-foreground text-center max-w-sm">
-              Access to this dashboard requires authentication. Continue to launch the login flow.
+              Use the email address approved by the CSNoel platform owner. The secure link will return you to this administrator workspace.
             </p>
           </div>
-          <Button
-            onClick={() => startLogin()}
-            size="lg"
-            className="w-full shadow-lg hover:shadow-xl transition-all"
-          >
-            Sign in
-          </Button>
+          <form className="w-full space-y-3" onSubmit={handleMagicLink}>
+            <label className="grid gap-2 text-sm font-medium text-foreground">
+              Administrator email
+              <Input
+                autoComplete="email"
+                disabled={sendingMagicLink}
+                name="email"
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder="name@organization.com"
+                required
+                type="email"
+                value={email}
+              />
+            </label>
+            <Button disabled={sendingMagicLink} size="lg" type="submit" className="w-full shadow-lg hover:shadow-xl transition-all">
+              {sendingMagicLink ? <><Loader2 className="mr-2 size-4 animate-spin" />Sending secure link…</> : "Email me a secure sign-in link"}
+            </Button>
+          </form>
         </div>
       </div>
     );

@@ -25,4 +25,24 @@
 - [x] Verify the job-detail content contract and secure resume-application handoff from the Apply Now control.
 - [x] Verify facilities inquiry success and error states, About page mission content, and chatbot open/loading/error behavior.
 - [x] Verify role-gated job create/edit/deactivate controls and protected applications, leads, chat, and alert review views.
-- [ ] Create a final deployment-ready checkpoint after all completed work is marked accurately.
+- [x] Create a final deployment-ready checkpoint after all completed work is marked accurately.
+- [x] Assess Netlify’s support for the CSNoel Node server, tRPC routes, OpenAI backend, Supabase workflows, and private resume uploads.
+- [x] Create and validate the Netlify deployment configuration without exposing server-side credentials.
+- [x] Configure required production environment variables in Netlify through its secure settings interface.
+- [ ] Deploy and validate a non-production Netlify preview of the full-stack CSNoel platform.
+- [ ] Obtain explicit approval before changing the live Netlify site assignment or DNS records for csnoelhealthcarestaffing.com.
+- [ ] Complete the approved custom-domain cutover while preserving Google Workspace email records.
+- [ ] Verify HTTPS, public routes, authenticated admin access, chatbot responses, applications, alerts, and DNS propagation on the live domain.
+- [x] Replace Manus OAuth with Supabase Auth for Netlify-hosted administrator authentication.
+- [x] Create and enforce a Supabase-backed administrator role model that is verified server-side on each protected request.
+- [x] Remove Manus-only runtime dependencies from the production public asset and API request paths.
+- [x] Extract the Express and tRPC API into a Netlify serverless-function entry point while preserving public and protected routes.
+- [x] Configure Supabase Auth allowed redirect URLs for the Netlify preview and custom production domain.
+- [ ] Promote the confirmed CSNoel administrator identity after its email address is provided.
+- [x] Add a Supabase migration that creates the service-role-only `admin_profiles` role table keyed to `auth.users.id`.
+- [x] Replace the tRPC request context with Bearer-token verification through Supabase Auth and server-side `admin_profiles` lookup.
+- [x] Replace the browser auth hook and dashboard sign-in screen with a secure Supabase magic-link flow and Supabase session sign-out.
+- [x] Send the active Supabase access token with each tRPC request and preserve protected/admin error handling.
+- [x] Remove Manus OAuth callback/session dependencies from the production server entry path without weakening the admin role gate.
+- [x] Add automated tests covering Supabase token parsing, anonymous context handling, and server-side role enforcement.
+- [ ] Prevent production tRPC error responses from exposing server stack traces while retaining useful client-safe error details.
