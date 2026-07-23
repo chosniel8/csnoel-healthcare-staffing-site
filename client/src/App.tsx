@@ -1,37 +1,37 @@
 import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
+import Admin from "@/pages/Admin";
+import About from "@/pages/About";
+import Facilities from "@/pages/Facilities";
+import Home from "@/pages/Home";
+import JobDetail from "@/pages/JobDetail";
+import Jobs from "@/pages/Jobs";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import { TooltipProvider } from "./components/ui/tooltip";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path="/" component={Home} />
+      <Route path="/jobs" component={Jobs} />
+      <Route path="/jobs/:id" component={JobDetail} />
+      <Route path="/facilities" component={Facilities} />
+      <Route path="/about" component={About} />
+      <Route path="/admin" component={Admin} />
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
-          <Toaster />
+          <Toaster richColors position="top-center" />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

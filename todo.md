@@ -1,0 +1,28 @@
+# Project TODO
+
+- [x] Create a secure server-only configuration layer for the OpenAI Responses API and Supabase credentials.
+- [x] Define TypeScript domain models and Supabase service contracts for jobs, applications, leads, chat conversations, and chat messages.
+- [x] Implement public job queries with active-job filtering and exact job types: Travel, LTC, Rapid Response, and Per Diem.
+- [x] Implement server-side candidate application submission with validation, private Supabase resume upload, application persistence, and owner alert delivery.
+- [x] Implement server-side facility inquiry submission with validation, lead persistence, and owner alert delivery.
+- [x] Implement owner-facing in-app notifications for new chatbot leads and new candidate applications.
+- [x] Implement OpenAI Responses API orchestration with the exact tool names search_jobs, get_job_details, and submit_lead.
+- [x] Persist non-sensitive chatbot conversation metadata and messages for the protected admin dashboard.
+- [x] Build a photo-led public homepage with a healthcare staffing hero, animated statistics, dual-audience calls-to-action, and responsive navigation/footer.
+- [x] Build a filterable public job board using specialty, location, and exact job-type filters.
+- [x] Build public job-detail and application experiences with description, requirements, benefits, salary range, and Apply Now flow.
+- [x] Build a facilities intake page for organizations seeking healthcare staffing support.
+- [x] Build an About Us page that communicates CSNoel’s mission, values, and differentiators with supporting imagery.
+- [x] Add a responsive floating, corner-pinned AI chat widget to the public experience.
+- [x] Build a role-gated admin dashboard for job CRUD, job deactivation, candidate application review, chatbot lead review, and conversation review.
+- [x] Source and integrate high-quality licensed clinician photography through approved asset links, with accessible alt text and optimized placement.
+- [x] Add unit tests for server-side validations, authorization gates, OpenAI tool dispatch, and alert events.
+- [x] Verify Supabase RLS, private resume access, public job access, and role-gated administration.
+- [x] Replace and validate the CSNoel Supabase service-role credential so protected admin tables are accessible only from the server.
+- [x] Verify desktop and mobile responsive presentation and review rendered pages for visual quality.
+- [x] Verify the homepage statistics, footer, public navigation, and licensed clinician-image alt text in the implemented public experience.
+- [x] Verify job filters expose the exact required job-type labels and pass the correct filter contract to the backend.
+- [x] Verify the job-detail content contract and secure resume-application handoff from the Apply Now control.
+- [x] Verify facilities inquiry success and error states, About page mission content, and chatbot open/loading/error behavior.
+- [x] Verify role-gated job create/edit/deactivate controls and protected applications, leads, chat, and alert review views.
+- [ ] Create a final deployment-ready checkpoint after all completed work is marked accurately.
