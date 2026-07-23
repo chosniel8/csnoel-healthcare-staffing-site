@@ -45,3 +45,4 @@
 - [x] Send the active Supabase access token with each tRPC request and preserve protected/admin error handling.
 - [x] Remove Manus OAuth callback/session dependencies from the production server entry path without weakening the admin role gate.
 - [x] Add automated tests covering Supabase token parsing, anonymous context handling, and server-side role enforcement.
+- [ ] Prevent production tRPC error responses from exposing server stack traces while retaining useful client-safe error details.
