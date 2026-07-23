@@ -4,6 +4,7 @@ import { CSNOEL_CONFIG } from "./csnoelConfig";
 const PUBLIC_SITE_ASSET_FILES = {
   "csnoel-clinicians-corridor.jpg": "csnoel-clinicians-corridor.jpg",
   "csnoel-clinician-stethoscope.jpg": "csnoel-clinician-stethoscope.jpg",
+  "csnoel-social-share-card.png": "csnoel-social-share-card.png",
 } as const;
 
 export type PublicSiteAssetKey = keyof typeof PUBLIC_SITE_ASSET_FILES;

@@ -76,3 +76,7 @@
 - [x] Remove the non-secret Supabase endpoint value from repository documentation and verify the literal is absent from tracked files.
 - [x] Push the scanner-safe correction to the Netlify-connected GitHub branch and verify a new production deploy publishes without an exposed-secret failure.
 - [x] Correct the Netlify `/site-assets/*` rewrite so it reaches the server asset endpoint instead of falling through to the SPA HTML shell.
+- [x] Audit the current document metadata and social-preview requirements for the public CSNoel domain.
+- [x] Create a branded 1200 × 630 CSNoel social-sharing image using the approved emblem and visual language.
+- [x] Add canonical, Open Graph, and X card metadata that references the hosted social-sharing image.
+- [ ] Verify the published metadata and social image delivery from the live custom domain.
