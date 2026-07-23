@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSNoel Healthcare Staffing | Your Partner in Healthcare Workforce Solutions</title>
+<meta name="description" content="CSNoel Healthcare Staffing connects nursing homes, hospitals, and rehabilitation centers with vetted nursing, physician, and allied health talent — fast.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--navy: #0A3A6E;
+--navy-deep: #062545;
+--green: #3AAA35;
+--sky: #2E8FD8;
+--gray: #E8E8E8;
+--dark: #3A4555;
+--white: #ffffff;
+--paper: #f4f7fb;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: 'Open Sans', sans-serif;
+background: var(--paper);
+color: var(--dark);
+min-height: 100vh;
+}
+
+a { color: inherit; }
+
+/* ── TOP NAV ── */
+.topnav {
+position: sticky;
+top: 0;
+z-index: 50;
+background: var(--white);
+border-bottom: 1px solid #e3eaf3;
+}
+.topnav-inner {
+max-width: 1120px;
+margin: 0 auto;
+padding: 14px 32px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo svg { width: 34px; height: 34px; }
+.nav-logo-text {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: 1.15rem;
+color: var(--navy);
+}
+.nav-logo-text span { color: var(--green); }
+.nav-links {
+display: flex;
+gap: 30px;
+list-style: none;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 0.87rem;
+}
+.nav-links a {
+text-decoration: none;
+color: var(--dark);
+transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--sky); }
+.nav-cta {
+background: var(--navy);
+color: var(--white) !important;
+padding: 10px 20px;
+border-radius: 8px;
+text-decoration: none;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 0.85rem;
+transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--sky); }
+@media (max-width: 800px) { .nav-links { display: none; } }
+
+/* ── HERO ── */
+.hero {
+background: var(--navy);
+padding: 76px 32px 90px;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+top: -100px; right: -100px;
+width: 420px; height: 420px;
+background: rgba(58,170,53,0.12);
+border-radius: 50%;
+}
+.hero::after {
+content: '';
+position: absolute;
+bottom: -140px; left: 10%;
+width: 340px; height: 340px;
+background: rgba(46,143,216,0.10);
+border-radius: 50%;
+}
+.hero-inner {
+max-width: 1120px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+text-align: center;
+}
+.hero-eyebrow {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 0.78rem;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(--green);
+margin-bottom: 20px;
+}
+.hero h1 {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: clamp(2rem, 4.4vw, 3.1rem);
+color: var(--white);
+line-height: 1.18;
+max-width: 780px;
+margin: 0 auto 22px;
+letter-spacing: -0.5px;
+}
+.hero h1 em {
+font-style: normal;
+color: var(--green);
+}
+.hero-sub {
+font-size: 1.08rem;
+color: rgba(255,255,255,0.8);
+max-width: 600px;
+margin: 0 auto 38px;
+line-height: 1.7;
+}
+.hero-actions {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.btn-primary, .btn-secondary {
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 0.92rem;
+padding: 14px 28px;
+border-radius: 9px;
+text-decoration: none;
+display: inline-block;
+transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-primary {
+background: var(--green);
+color: var(--white);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(58,170,53,0.35); }
+.btn-secondary {
+background: rgba(255,255,255,0.08);
+color: var(--white);
+border: 1.5px solid rgba(255,255,255,0.3);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.15); }
+
+/* ── SHARED SECTION WRAP ── */
+.section {
+max-width: 1120px;
+margin: 0 auto;
+padding: 80px 32px;
+}
+.section-label {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 0.72rem;
+letter-spacing: 2.5px;
+text-transform: uppercase;
+color: var(--green);
+margin-bottom: 12px;
+text-align: center;
+}
+.section-title {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: clamp(1.6rem, 3vw, 2.2rem);
+color: var(--navy);
+text-align: center;
+max-width: 700px;
+margin: 0 auto 18px;
+line-height: 1.3;
+}
+.section-desc {
+text-align: center;
+max-width: 620px;
+margin: 0 auto 56px;
+color: #6b7a8d;
+font-size: 1rem;
+line-height: 1.7;
+}
+
+/* ── MISSION (kept from original profile, refined) ── */
+.mission-wrap { background: var(--white); }
+.mission-block {
+background: linear-gradient(135deg, #eaf4ff 0%, #f0faf0 100%);
+border-left: 5px solid var(--green);
+border-radius: 0 14px 14px 0;
+padding: 36px 40px;
+position: relative;
+max-width: 900px;
+margin: 0 auto;
+}
+.mission-block::before {
+content: '\201C';
+font-family: 'Poppins', sans-serif;
+font-size: 5.5rem;
+color: var(--green);
+opacity: 0.18;
+position: absolute;
+top: -14px; left: 20px;
+line-height: 1;
+}
+.mission-text {
+font-family: 'Poppins', sans-serif;
+font-size: 1.12rem;
+font-weight: 600;
+color: var(--navy);
+line-height: 1.75;
+}
+
+/* ── THE CSNOEL WAY (process, our version of the 4-stage) ── */
+.way-wrap { background: var(--paper); }
+.way-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+.way-card {
+background: var(--white);
+border: 1.5px solid #dde8f7;
+border-radius: 14px;
+padding: 30px 24px;
+position: relative;
+}
+.way-index {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: 2.4rem;
+color: var(--gray);
+line-height: 1;
+margin-bottom: 16px;
+}
+.way-card h3 {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 1rem;
+color: var(--navy);
+margin-bottom: 10px;
+}
+.way-card p {
+font-size: 0.88rem;
+color: #6b7a8d;
+line-height: 1.6;
+}
+@media (max-width: 900px) { .way-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .way-grid { grid-template-columns: 1fr; } }
+
+/* ── CORE SERVICES (restructured, StaffMed-style categories) ── */
+.services-wrap { background: var(--white); }
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+.service-card {
+background: #f8faff;
+border: 1.5px solid #dde8f7;
+border-radius: 12px;
+padding: 28px 26px;
+transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.service-card:hover {
+border-color: var(--sky);
+box-shadow: 0 10px 26px rgba(46,143,216,0.12);
+transform: translateY(-3px);
+}
+.service-icon {
+width: 44px; height: 44px;
+background: linear-gradient(135deg, var(--navy), var(--sky));
+border-radius: 10px;
+display: flex; align-items: center; justify-content: center;
+margin-bottom: 18px;
+}
+.service-icon svg { color: white; }
+.service-title {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 1rem;
+color: var(--navy);
+margin-bottom: 8px;
+}
+.service-desc {
+font-size: 0.87rem;
+color: #6b7a8d;
+line-height: 1.65;
+}
+@media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* ── ABOUT / STORY ── */
+.about-wrap { background: var(--navy); color: var(--white); }
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+.about-grid .section-label { text-align: left; }
+.about-grid h2 {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: clamp(1.5rem, 2.6vw, 2rem);
+margin-bottom: 20px;
+line-height: 1.3;
+}
+.about-grid p {
+color: rgba(255,255,255,0.78);
+line-height: 1.8;
+font-size: 0.97rem;
+margin-bottom: 16px;
+}
+.stat-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 22px;
+}
+.stat-card {
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.15);
+border-radius: 12px;
+padding: 24px;
+}
+.stat-num {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: 2rem;
+color: var(--green);
+}
+.stat-label {
+font-size: 0.82rem;
+color: rgba(255,255,255,0.7);
+margin-top: 4px;
+}
+@media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; } }
+
+/* ── CTA STRIP ── */
+.cta-strip {
+background: linear-gradient(120deg, var(--green) 0%, var(--sky) 100%);
+padding: 56px 32px;
+text-align: center;
+}
+.cta-strip h2 {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+color: var(--white);
+margin-bottom: 26px;
+max-width: 640px;
+margin-left: auto;
+margin-right: auto;
+}
+.cta-strip .hero-actions { margin-top: 0; }
+.cta-strip .btn-primary { background: var(--navy-deep); }
+.cta-strip .btn-secondary { border-color: rgba(255,255,255,0.5); }
+
+/* ── FOOTER ── */
+footer {
+background: var(--navy-deep);
+padding: 46px 32px 28px;
+}
+.footer-inner {
+max-width: 1120px;
+margin: 0 auto;
+}
+.footer-top {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 32px;
+padding-bottom: 34px;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand-row { display: flex; align-items: center; gap: 10px; }
+.footer-brand-row svg { width: 30px; height: 30px; }
+.footer-brand-name {
+font-family: 'Poppins', sans-serif;
+font-weight: 800;
+font-size: 1.05rem;
+color: var(--white);
+}
+.footer-brand-name span { color: var(--green); }
+.footer-tagline-text {
+font-size: 0.82rem;
+color: rgba(255,255,255,0.5);
+margin-top: 6px;
+max-width: 280px;
+line-height: 1.6;
+}
+.footer-col h4 {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 0.8rem;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.55);
+margin-bottom: 14px;
+}
+.footer-col a {
+display: block;
+font-size: 0.86rem;
+color: rgba(255,255,255,0.75);
+text-decoration: none;
+margin-bottom: 10px;
+}
+.footer-col a:hover { color: var(--green); }
+.footer-bottom {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 12px;
+padding-top: 22px;
+font-size: 0.78rem;
+color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 620px) {
+.section { padding: 56px 22px; }
+.hero { padding: 56px 22px 70px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+<div class="topnav-inner">
+<a href="#top" class="nav-logo">
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+<rect x="22" y="10" width="20" height="60" rx="4" fill="#2E8FD8"/>
+<rect x="10" y="22" width="44" height="20" rx="4" fill="#2E8FD8"/>
+<rect x="22" y="10" width="10" height="60" rx="4" fill="#0A3A6E" opacity="0.55"/>
+<rect x="10" y="22" width="44" height="10" rx="4" fill="#0A3A6E" opacity="0.45"/>
+<circle cx="58" cy="18" r="7" fill="#3AAA35"/>
+<path d="M18 62 Q40 75 64 52" stroke="#3AAA35" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="nav-logo-text">CS<span>Noel</span></span>
+</a>
+<ul class="nav-links">
+<li><a href="#services">Core Services</a></li>
+<li><a href="#way">Our Process</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#top">Candidates</a></li>
+</ul>
+<a href="mailto:info@csnoelhealthcarestaffing.com" class="nav-cta">Partner With Us</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+<div class="hero-inner">
+<div class="hero-eyebrow">Healthcare Staffing, Done Right</div>
+<h1>The right clinician, in the right role, <em>before the shift goes unfilled.</em></h1>
+<p class="hero-sub">
+CSNoel Healthcare Staffing connects nursing homes, hospitals, and rehabilitation
+centers with vetted nursing and clinical talent — so patient care never waits on
+an open position.
+</p>
+<div class="hero-actions">
+<a href="mailto:info@csnoelhealthcarestaffing.com" class="btn-primary">Request Staffing</a>
+<a href="#services" class="btn-secondary">Explore Opportunities</a>
+</div>
+</div>
+</header>
+
+<!-- MISSION -->
+<section class="section mission-wrap">
+<div class="mission-block">
+<div class="section-label" style="text-align:left;">Our Mission</div>
+<div class="mission-text">
+At CSNoel Healthcare Staffing, our mission is to strengthen the healthcare system
+by connecting exceptional nursing professionals with the facilities that need them
+most — delivering fast, reliable, and compassionate workforce solutions that
+safeguard patient care and empower healthcare communities to thrive.
+</div>
+</div>
+</section>
+
+<!-- THE CSNOEL WAY -->
+<section class="section way-wrap" id="way">
+<div class="section-label">How We Work</div>
+<h2 class="section-title">The CSNoel Way</h2>
+<p class="section-desc">
+No acronyms, no black box. Just a straightforward process built around one
+question at every step: does this get the right person into the right role, fast?
+</p>
+<div class="way-grid">
+<div class="way-card">
+<div class="way-index">01</div>
+<h3>Understand the Need</h3>
+<p>We start by learning your unit, your shift gaps, and what "the right fit" actually means for your team — not a generic job spec.</p>
+</div>
+<div class="way-card">
+<div class="way-index">02</div>
+<h3>Vet Without Shortcuts</h3>
+<p>Every candidate is screened for credentials, clinical fit, and reliability before they ever reach your desk.</p>
+</div>
+<div class="way-card">
+<div class="way-index">03</div>
+<h3>Move at Shift Speed</h3>
+<p>Urgent openings get urgent attention. We work the phones and calendars until a qualified candidate is confirmed.</p>
+</div>
+<div class="way-card">
+<div class="way-index">04</div>
+<h3>Stay Through Onboarding</h3>
+<p>We don't disappear after placement — we check in through credentialing and the first weeks on the floor.</p>
+</div>
+</div>
+</section>
+
+<!-- CORE SERVICES -->
+<section class="section services-wrap" id="services">
+<div class="section-label">What We Do</div>
+<h2 class="section-title">Core Services</h2>
+<p class="section-desc">
+From bedside nursing to executive leadership, we staff across the full continuum
+of care — matched to the setting, not just the specialty.
+</p>
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+</div>
+<div class="service-title">Nursing Staffing</div>
+<div class="service-desc">RNs and LPNs for travel contracts and long-term care coverage, matched to your unit's pace and patient population.</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+</div>
+<div class="service-title">Physician & Provider Recruiting</div>
+<div class="service-desc">Locum and permanent physician placement for facilities needing clinical leadership on the floor, not just on paper.</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21l2.3-7.2-6-4.4h7.6z"/></svg>
+</div>
+<div class="service-title">Advanced Practice Staffing</div>
+<div class="service-desc">Nurse practitioners and physician assistants for facilities extending coverage without extending wait times.</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+</div>
+<div class="service-title">Allied Health Staffing</div>
+<div class="service-desc">Therapists, technicians, and allied clinical staff placed with the same rigor we apply to nursing roles.</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+</div>
+<div class="service-title">Rapid Response Staffing</div>
+<div class="service-desc">Same-week and overnight placement for last-minute vacancies, so a single call-out never becomes a coverage crisis.</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+</div>
+<div class="service-title">Executive & Direct Hire Search</div>
+<div class="service-desc">Permanent placement for leadership and core clinical roles when you're building your bench, not just filling a shift.</div>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT / STORY -->
+<section class="about-wrap" id="about">
+<div class="section" style="padding-top:80px; padding-bottom:80px;">
+<div class="about-grid">
+<div>
+<div class="section-label">Our Story</div>
+<h2>Built on a simple idea: staffing shouldn't feel like a gamble.</h2>
+<p>
+CSNoel Healthcare Staffing was founded to close the gap between qualified
+nursing talent and the facilities that depend on them. We saw too many units
+stretched thin by a slow hiring process — and too many great clinicians stuck
+waiting on callbacks that never came.
+</p>
+<p>
+We built CSNoel to move faster than that, without cutting corners on
+vetting. Every placement carries our name — so we treat every shift filled
+as a promise kept, to the facility and to the patients we'll never meet.
+</p>
+</div>
+<div class="stat-row">
+<div class="stat-card">
+<div class="stat-num">13wk</div>
+<div class="stat-label">Typical travel contract length</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">24/7</div>
+<div class="stat-label">Rapid response availability</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">100%</div>
+<div class="stat-label">Credential-verified placements</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">TX+</div>
+<div class="stat-label">Facilities served nationwide</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+<h2>An open shift is a patient care risk. Let's close it — this week.</h2>
+<div class="hero-actions">
+<a href="mailto:info@csnoelhealthcarestaffing.com" class="btn-primary">Talk to Our Team</a>
+<a href="tel:+14694761237" class="btn-secondary">Call (469) 476-1237</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div>
+<div class="footer-brand-row">
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+<rect x="22" y="10" width="20" height="60" rx="4" fill="#2E8FD8"/>
+<rect x="10" y="22" width="44" height="20" rx="4" fill="#2E8FD8"/>
+<rect x="22" y="10" width="10" height="60" rx="4" fill="#0A3A6E" opacity="0.55"/>
+<rect x="10" y="22" width="44" height="10" rx="4" fill="#0A3A6E" opacity="0.45"/>
+<circle cx="58" cy="18" r="7" fill="#3AAA35"/>
+<path d="M18 62 Q40 75 64 52" stroke="#3AAA35" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="footer-brand-name">CS<span>Noel</span> Healthcare Staffing</span>
+</div>
+<div class="footer-tagline-text">Your Partner in Healthcare Workforce Solutions. Connecting exceptional clinicians with the facilities that need them.</div>
+</div>
+<div class="footer-col">
+<h4>Services</h4>
+<a href="#services">Nursing Staffing</a>
+<a href="#services">Physician Recruiting</a>
+<a href="#services">Allied Health Staffing</a>
+<a href="#services">Executive Search</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="#about">About Us</a>
+<a href="#way">Our Process</a>
+<a href="mailto:info@csnoelhealthcarestaffing.com">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Get in Touch</h4>
+<a href="tel:+14694761237">+1 (469) 476-1237</a>
+<a href="mailto:info@csnoelhealthcarestaffing.com">info@csnoelhealthcarestaffing.com</a>
+<a href="https://csnoelhealthcarestaffing.com">csnoelhealthcarestaffing.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 CSNoel Healthcare Staffing, LLC. All rights reserved.</span>
+<span>Texas-based · Serving facilities nationwide</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
