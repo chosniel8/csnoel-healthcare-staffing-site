@@ -1,6 +1,6 @@
 # Netlify Preview Environment Repair
 
-The isolated `csnoel-healthcare-migration-preview` Netlify project deploys the `netlify-preview-migration` branch. Its first build completed, but the browser bundle lacked Supabase settings because its Production-context values were empty. The two Vite variables—`VITE_CSNOEL_SUPABASE_ANON_KEY` and `VITE_CSNOEL_SUPABASE_URL`—and the three server-side values—`CSNOEL_SUPABASE_URL`, `CSNOEL_SUPABASE_SERVICE_ROLE_KEY`, and `OPENAI_API_KEY`—now have saved Production-context values. The browser-safe URL is `https://tgjwkmzxgalirmqglnpu.supabase.co`.
+The isolated `csnoel-healthcare-migration-preview` Netlify project deploys the `netlify-preview-migration` branch. Its first build completed, but the browser bundle lacked Supabase settings because its Production-context values were empty. The two Vite variables—`VITE_CSNOEL_SUPABASE_ANON_KEY` and `VITE_CSNOEL_SUPABASE_URL`—and the three server-side values—`CSNOEL_SUPABASE_URL`, `CSNOEL_SUPABASE_SERVICE_ROLE_KEY`, and `OPENAI_API_KEY`—now have saved Production-context values. The browser-safe endpoint is configured in Netlify rather than repeated in repository documentation.
 
 ## 2026-07-23 — Lambda compatibility environment-size failure
 
